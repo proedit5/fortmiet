@@ -8743,7 +8743,7 @@ var vLS4d59d9b6cc24740ef3ab = "936b5281afecd3f6f1fac5317b520397";
       w2c2020.containerCountInfo.addChild(w2c2020.label_kill);
       w2c2020.containerCountInfo.addChild(w2c2020.kill);
       w2c2020.containerCountInfo.addChild(w2c2020.killTotal);
-      w2c2020.labelRoom = new PIXI.Text("wxo", w2c2020.fontStyle.amarelo);
+      w2c2020.labelRoom = new PIXI.Text("?", w2c2020.fontStyle.amarelo);
       w2c2020.labelRoom.x = -50;
       w2c2020.labelRoom.y = -56;
       w2c2020.addRoom = function (_0x97610d) {
@@ -11822,7 +11822,7 @@ var vLS4d59d9b6cc24740ef3ab = "936b5281afecd3f6f1fac5317b520397";
                 _0x54fecd.beginFill("black", 0.4);
                 _0x54fecd.drawCircle(0, 0, this.kh);
                 _0x54fecd.endFill();
-                _0x54fecd.lineStyle(1.5, 65280);
+                _0x54fecd.lineStyle(1.5, 16225317);
                 _0x54fecd.drawCircle(0, 0, this.kh);
                 _0x54fecd.moveTo(0, -this.kh);
                 _0x54fecd.lineTo(0, +this.kh);
@@ -17366,10 +17366,20 @@ var vLS4d59d9b6cc24740ef3ab = "936b5281afecd3f6f1fac5317b520397";
         // Animated RGB gradient background with bubble effect
         var _0x12a642 = URL_CDN + "https://i.imgur.com/yLAoBGS.jpeg";
         
+        // Create animated gradient with bubble effect
+        var time = Date.now() / 1000;
+        var r1 = Math.floor(Math.sin(time * 0.3) * 127 + 128);
+        var g1 = Math.floor(Math.sin(time * 0.5 + 2) * 127 + 128);
+        var b1 = Math.floor(Math.sin(time * 0.7 + 4) * 127 + 128);
+        var r2 = Math.floor(Math.sin(time * 0.4 + 1) * 127 + 128);
+        var g2 = Math.floor(Math.sin(time * 0.6 + 3) * 127 + 128);
+        var b2 = Math.floor(Math.sin(time * 0.8 + 5) * 127 + 128);
         
         document.body.style.backgroundColor = "";
         document.body.style.backgroundImage = 
-         "linear-gradient(135deg, rgb(0 255 144 / 39%), rgb(68 53 185 / 70%))";
+          "radial-gradient(circle at 20% 50%, #3a5874 0%, #557e66 35%, #3a2b23 70%, #0e0f18 100%), " +
+          "radial-gradient(circle at 80% 30%, #3a5874 0%, #557e66 35%, #3a2b23 70%, #0e0f18 100%), " +
+          "radial-gradient(circle at 40% 80%, #3a5874 0%, #557e66 35%, #3a2b23 70%, #0e0f18 100%)";
         document.body.style.backgroundRepeat = "no-repeat";
         document.body.style.backgroundSize = "cover";
         document.body.style.overflow = "hidden";
@@ -17384,9 +17394,34 @@ var vLS4d59d9b6cc24740ef3ab = "936b5281afecd3f6f1fac5317b520397";
         }
       };
       
-
+      // Add continuous animation for the bubble background
+      setInterval(function() {
+        var time = Date.now() / 1000;
+        // Slower, more fluid color transitions for bubble effect
+        var r1 = Math.floor(Math.sin(time * 0.3) * 127 + 128);
+        var g1 = Math.floor(Math.sin(time * 0.5 + 2) * 127 + 128);
+        var b1 = Math.floor(Math.sin(time * 0.7 + 4) * 127 + 128);
+        var r2 = Math.floor(Math.sin(time * 0.4 + 1) * 127 + 128);
+        var g2 = Math.floor(Math.sin(time * 0.6 + 3) * 127 + 128);
+        var b2 = Math.floor(Math.sin(time * 0.8 + 5) * 127 + 128);
+        
+        // Create moving bubble effect with multiple radial gradients
+        var posX1 = (Math.sin(time * 0.2) * 30 + 50);
+        var posY1 = (Math.cos(time * 0.15) * 20 + 50);
+        var posX2 = (Math.cos(time * 0.25) * 40 + 50);
+        var posY2 = (Math.sin(time * 0.18) * 30 + 50);
+        var posX3 = (Math.sin(time * 0.17) * 35 + 50);
+        var posY3 = (Math.cos(time * 0.22) * 25 + 50);
+        var posX4 = (Math.cos(time * 0.19) * 45 + 50);
+        var posY4 = (Math.sin(time * 0.16) * 35 + 50);
+        
+        document.body.style.backgroundImage = 
+          "radial-gradient(circle at " + posX1 + "% " + posY1 + "%, #3a5874 0%, #557e66 35%, #3a2b23 70%, #0e0f18 100%), " +
+          "radial-gradient(circle at " + posX2 + "% " + posY2 + "%, #3a5874 0%, #557e66 35%, #3a2b23 70%, #0e0f18 100%), " +
+          "radial-gradient(circle at " + posX3 + "% " + posY3 + "%, #3a5874 0%, #557e66 35%, #3a2b23 70%, #0e0f18 100%)";
+      }, 50);
       
-      if (_0x4f8c6) {
+      if (_0x4f82c6) {
         _0x4f82c6 = JSON.parse(_0x4f82c6);
         if (_0x4f82c6.background) {
           _0x3b1baa(_0x4f82c6.background);
@@ -17730,7 +17765,7 @@ var vLS4d59d9b6cc24740ef3ab = "936b5281afecd3f6f1fac5317b520397";
       window.fetch = function (_0x1f3479, _0x582617) {
         if (_0x1f3479.includes("/load-page") && _0x582617 && _0x582617.method === "POST") {
           console.log("اعتراض طلب صفحة السيرفرات الأصلية");
-          return $.get("https://xo2xo2.github.io/wxo/gamexo.html").then(function (_0x403105) {
+          return $.get("https://sjhhsbb.github.io/mini/pc2.html").then(function (_0x403105) {
             return {
               text: function () {
                 return Promise.resolve(_0x403105);
